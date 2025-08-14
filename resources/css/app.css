@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* EFFICIO brand tokens */
+:root {
+    /* Dark surface and text */
+    --efficio-bg: #0a0a0a;          /* page background */
+    --efficio-surface: #161615;     /* cards / panels */
+    --efficio-text: #ededec;        /* primary text */
+    --efficio-muted: #a1a09a;       /* secondary text */
+
+    /* Neon accent (from logo) */
+    --efficio-accent: #c9ff2e;      /* neon lime */
+    --efficio-accent-700: #a8f01f;
+    --efficio-accent-900: #7bc100;
+    --efficio-glow: 0 0 12px rgba(201, 255, 46, 0.7), 0 0 32px rgba(201, 255, 46, 0.35);
+
+    /* Supporting palette (approx. from provided strip) */
+    --efficio-blue-700: #0e3d79;    /* deep navy */
+    --efficio-blue-600: #114e80;    /* mid navy */
+    --efficio-cyan-200: #bfe2e8;    /* light cyan */
+    --efficio-teal-400: #77b6c3;    /* teal */
+    --efficio-orange-500: #e18645;  /* orange */
+    --efficio-sand-300: #eec38f;    /* sand */
+    --efficio-brown-700: #7c3b21;   /* brown */
+    --efficio-ink: #1e1511;         /* near-black */
+}
+
+/* Small utilities bound to brand tokens */
+.text-brand { color: var(--efficio-accent); }
+.bg-brand { background-color: var(--efficio-accent); }
+.border-brand { border-color: var(--efficio-accent); }
+.ring-brand-glow { box-shadow: var(--efficio-glow); }
+.neon-outline { outline: 1px solid var(--efficio-accent); box-shadow: var(--efficio-glow); }
+.surface { background-color: var(--efficio-surface); color: var(--efficio-text); }
+.muted { color: var(--efficio-muted); }
+
