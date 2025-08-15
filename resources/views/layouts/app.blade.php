@@ -248,7 +248,7 @@
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                         Impostazioni
                     </a>
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('logout.perform') }}">
                         @csrf
                         <button type="submit" role="menuitem">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 21H6a3 3 0 01-3-3V6a3 3 0 013-3h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
